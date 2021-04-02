@@ -1,0 +1,284 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #232323;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #232323;
+}
+
+#header-img {
+  display: inline;
+  float: left;
+  margin: 0 1em 1em 3em;
+}
+
+h1 {
+  padding-top: 2em;
+  margin-top: 2.5em;
+  font-family: 'Ballet', cursive;
+  font-weight: 500;
+  color: #efe700;
+  text-align: center;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: 'Tangerine', cursive;
+  text-align: center;
+  color: #f5f5dc;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  color: #3c340c;
+}
+
+h4 {
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
+  margin: 1em;
+  padding-top: 3em;
+  color: #3c340c;
+}
+
+.section-title {
+  display: block;
+  color: #efe700;
+  text-align: center;
+  font-family: 'Tangerine', cursive;
+  font-size: 4em;
+  margin-top: 1.8em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  font-family: 'Lora', serif;
+  padding: 2em;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: justify;
+  align-items: flex-start;
+}
+
+#prices p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.1em;
+  font-weight: 600;
+}
+
+a:link {
+  text-decoration: none;
+  color: #f5f5dc;
+  font-size: 1em;
+}
+
+a:visited {
+  color: #ae8726;
+}
+
+a:hover {
+  color: #efe700;
+}
+
+a:active {
+  color: #fff;
+}
+
+.menu-item {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  padding: 2em;
+  text-align: center;
+  float: left;
+}
+
+#nav-bar {
+  display: inline;
+  float: left;
+}
+
+.footer-info {
+  display: inline;
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  padding: 1.6em 3em;
+  text-align: center;
+  float: left;
+}
+
+.footer-info a {
+  color: #232323;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer span {
+  padding: 1em;
+}
+
+.copyright {
+  padding-left: 7em;
+}
+
+#form {
+  text-align: center;
+  padding: .35em .625em 2em;
+  margin: auto;
+}
+
+input[type="email"] {
+  padding: 8px;
+  border-radius: 8px;
+  margin: 1.5em;
+}
+
+@media screen and (max-width: 810px) {
+  .menu-item {
+    padding: 0.3em;
+    text-align: right;
+    float: none;
+  }
+  h1 {
+    margin-top: 4em;
+    font-size: 3em;
+  }
+  #description {
+    font-size: 2.4em;
+  }
+  #header-img {
+    margin-left: 3em;
+    margin-right: 0;
+    float: none;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  #form {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #header-img {
+    float: none;
+    max-width: 4.7em;
+    margin-left: 1em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+}
+
+.box, .review {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width: 23em;
+  height: 15em;
+}
+
+#prices .box {
+  height: auto;
+  border-radius: 20px;
+  padding: 1em;
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+}
+
+.review {
+  width: 20em;
+  height: 9em;
+}
+
+#features, #reviews, #prices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2em 0 2em 0;
+}
+
+#features, #reviews, #form, footer {
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+}
+
+#reviews p {
+  padding-top: 15px;
+  font-style: italic;
+  font-size: 0.96em;
+}
+
+#video-demo {
+  display: flex;
+  justify-content: center;
+  margin: 6em;
+}
+
+iframe {
+  border: 0;
+}
+
+#stripes, #lights, #drop {
+  display: block;
+  height: 15em;
+  border-radius: 50%;
+}
+
+#submit {
+  background: linear-gradient(#F9F295, #E0AA3E, #E0AA3E, #B88A44);
+  border: 2px solid #3c340c;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  font-family: 'Lora', cursive;
+  font-weight: 600;
+}
+
+#submit:hover {
+  animation-name: shine;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shine {
+  0% {
+    background: linear-gradient(#F9F295, #E0AA3E, #E0AA3E, #B88A44);
+  }
+  25% {
+    background: linear-gradient(#E0AA3E, #F9F295, #E0AA3E, #B88A44);
+  }
+  75% {
+    background: linear-gradient(#E0AA3E, #E0AA3E, #F9F295, #B88A44);
+  }
+  100% {
+    background: linear-gradient(#E0AA3E, #E0AA3E, #B88A44, #F9F295);
+  }
+}
