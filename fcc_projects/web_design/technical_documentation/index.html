@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Questrial&display=swap" rel="stylesheet">
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<title>Technical-Documentation</title>
+	</head>
+	<body>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<input id="red" type="radio" name="colors">
+		<input id="yellow" type="radio" name="colors">
+		<input id="blue" type="radio" name="colors">
+		<input id="green" type="radio" name="colors">
+		<nav id="navbar">
+			<header>CSS Variables</header>
+			<ul>
+				<li>
+					<a class="nav-link" href="#Introduction">Introduction</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Creating_Custom_Variables">Creating Custom Variables</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Using_Custom_Variables">Using Custom Variables</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Fallback_Values">Fallback Values</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Browser_Fallbacks">Browser Fallbacks</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Inheritance">Inheritance</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Specific_Changes">Specific Changes</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Media_Queries">Media Queries</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#Summary">Summary</a>
+				</li>
+			</ul>  
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="Introduction">
+				<header>Introduction</header>
+				<p>CSS variables are useful tools for modifying many CSS style properties at the same time, for example when trying different styles on multiple elements that share the same property value. They are more efficient than manually changing the values one by one every time.</p>
+			</section>
+			<section class="main-section" id="Creating_Custom_Variables">
+				<header>Creating Custom Variables</header>
+				<p>CSS variables are created by declaring an identifier preceded by two hyphens and giving it a value. It is recommended to keep the variable names in lowercase to avoid typing errors. Only letters, numbers, underscore and hyphens are allowed. For example:</p>
+				<code>--header-background: blue;<br>--maintext-font_2: 'Arial', sans-serif;</code>
+			</section>
+			<section class="main-section" id="Using_Custom_Variables">
+				<header>Using Custom Variables</header>
+				<p>In order to use them, their name must be assigned as a value in other CSS properties, surrounded by parentheses and preceded by 'var'. CSS variables are case-sensitive so they need to be an exact match to their declaration in order to work. For example:</p>
+				<code>background: var(--header-background);<br>font-family: var(--maintext-font_2);</code>
+			</section>
+			<section class="main-section" id="Fallback_Values">
+				<header>Fallback Values</header>
+				<p>As with other CSS properties, it is optional to attach a fallback value (separated by a comma) that the browser will revert to if the variable is not set. This is useful for debugging but it isn't used to fix the browser compatibility. In the next examples, the value is used so that the browser has a color to display if the variable is not defined:</p>
+				<code>background: var(--header-background, red); <br>background: var(--header-background, var(--background-2, green)); <br>background: var(--header-background, --background-2, blue);</code>
+				<p>As shown above, if a second variable as a fallback is needed, the correct syntax is the one shown in the second example. The second argument "--background-2, blue" shown in the third example is invalid.</p>
+			</section>
+			<section class="main-section" id="Browser_Fallbacks">
+				<header>Browser Fallbacks</header>
+				<p>In the case of browsers that don't support CSS variables, since they can't parse the fallback value either, they will revert to the default value, which can cause problems. To solve this situation, it is recommended to provide another more widely supported value immediately before using the variable, so that older browsers have something to fall back on. Like this:</p>
+				<code>background: red;<br> background: var(--header-background, #D2D2D2);</code>
+			</section>
+			<section class="main-section" id="Inheritance">
+				<header>Inheritance</header>
+				<p>Like other properties, CSS Variables values of an element are inherited from its parent if no custom property is defined. Bear in mind that not all CSS properties are inherited by default.</p>
+			</section>
+			<section class="main-section" id="Specific_Changes">
+				<header>Specific Changes</header>
+				<p>It is useful to create variables in the :root pseudo-class selector and then over-write these variables by assigning new values within a specific element in CSS. For example:</p>
+				<code>:root { --circle-background: red;} <br>div { --circle-background: green; }</code>
+			</section>
+			<section class="main-section" id="Media_Queries">
+				<header>Media Queries</header>
+				<p>When using variables in media queries, their value will be used when the media query takes effect.</p>
+			</section>
+			<section class="main-section" id="Summary">
+				<header>Summary</header>
+				<p>The main points of this document are:</p>
+				<ul>
+					<li>
+						You can create CSS variables by defining them like <b>--variablename</b> and assigning them a value;
+					</li>
+					<li>
+						To use CSS variables you must use <b>var(--variablename)</b> as a value in the corresponding property;
+					</li>
+					<li>
+						You can include a fallback value (separated by a comma) for the cases when the variable is not defined;
+					</li>
+					<li>
+						You can add a fallback property right before using the variable so the browsers than can't read variables have something to use;
+					</li>
+					<li>
+						Variables are inherited if the property can be inherited and is not overwritten;
+					</li>
+					<li>
+						Variables are useful for media queries.
+					</li>
+				</ul>
+				<p>Here are the variables created for this page. You can clic on the buttons below to see the effect they make when their values are changed:</p>
+				<code>:root {<br>--title-col: #88DD7C;<br>--code-col: #66B677;<br>--bg-col: #DDF4E9;<br>} </code>
+			</section>
+			<label for="red">RED</label>
+			<label for="yellow">YELLOW</label>
+			<label for="blue">BLUE</label>
+			<label for="green">GREEN (default)</label>
+			<br>
+			<footer>
+				<div>
+					<span><a href="#">Terms of use</a></span>
+					<span><a href="#">Privacy Policy</a></span>
+					<span><a href="#">About Us</a></span>
+					<span><a href="#">Contact Us</a></span>
+					<span>© 2021 by M.R.P.A. - Project for freeCodeCamp.org</span>
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
