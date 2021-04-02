@@ -1,192 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<link rel="stylesheet" href="styles.css" type="text/css">
-	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patua+One&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-	<meta content="width=device-width, initial-scale=1" name="viewport"/>
-	<title>Survey-Form</title>
-</head>
-<body>
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-	<h1 id="title">Survey Form</h1>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patua+One&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<title>Survey-Form</title>
+	</head>
+	<body>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<h1 id="title">Survey Form</h1>
 
-	<p id="description">-Answer these questions about videogames for a chance to win a PS5-</p>
-	<br>
+		<p id="description">-Answer these questions about videogames for a chance to win a PS5-</p>
+		<br>
 
-	<form id="survey-form" action="#">
-		<fieldset class="form-field">
-			<legend>Personal details:</legend>
-			<p>Gender:</p>
-			<div class="columns">
-				<label for="male">
-					<input id="male" value="male" type="radio" name="gender">
-					<span class="radio"></span>Male
+		<form id="survey-form" action="#">
+			<fieldset class="form-field">
+				<legend>Personal details:</legend>
+				<p>Gender:</p>
+				<div class="columns">
+					<label for="male">
+						<input id="male" value="male" type="radio" name="gender">
+						<span class="radio"></span>Male
+					</label>
+					<label for="female">
+						<input id="female" value="female" type="radio" name="gender">
+						<span class="radio"></span>Female
+					</label>
+					<label for="other">
+						<input id="other" value="other" type="radio" name="gender">
+						<span class="radio"></span>Other
+					</label>
+					<label for="dk-da">
+						<input id="dk-da" value="dk-da" type="radio" name="gender">
+						<span class="radio"></span>DK/DA
+					</label>
+				</div>
+				<br>
+				<label for="dropdown">Age range:
+					<select id="dropdown" name="age-group">
+						<option value="0-12">Less than 13 years</option>
+						<option value="13-19">13-19 years</option>
+						<option value="20-26">20-26 years</option>
+						<option value="26-30">26-30 years</option>
+						<option value="31-40">31-40 years</option>
+						<option value="41-50">41-50 years</option>
+						<option value="50-60">50-60 years</option>
+						<option value="60+">More than 60 years</option>
+					</select>
 				</label>
-				<label for="female">
-					<input id="female" value="female" type="radio" name="gender">
-					<span class="radio"></span>Female
+			</fieldset>
+
+			<fieldset class="form-field">
+				<legend>Questions:</legend>
+				<label id="number-label" for="number">How many hours do you usually play in a week?:<br>
+					<input id="number" type="number" name="hours-played" min="0" max="168" step="0.5" placeholder="0"> 
 				</label>
-				<label for="other">
-					<input id="other" value="other" type="radio" name="gender">
-					<span class="radio"></span>Other
+				<label for="expenses">Approximately, how much money (in USD) do you spend in videogames in a year?:<br>
+					<input id="expenses" type="number" name="expenses" min="0" max="100000" placeholder="0">
 				</label>
-				<label for="dk-da">
-					<input id="dk-da" value="dk-da" type="radio" name="gender">
-					<span class="radio"></span>DK/DA
+				<p>Which genres do you like the most? (you can choose more than one option):</p>
+				<div class="columns-2">
+					<label for="action">						
+						<input id="action" value="action" type="checkbox" name="genres">
+						<span class="checkmark"></span>Action
+					</label>
+					<label for="adventure">
+						<input id="adventure" value="adventure" type="checkbox" name="genres">
+						<span class="checkmark"></span>Adventure
+					</label>
+					<label for="battleroyale">
+						<input id="battleroyale" value="battleroyale" type="checkbox" name="genres">
+						<span class="checkmark"></span>Battle Royale
+					</label>
+					<label for="cards">
+						<input id="cards" value="cards" type="checkbox" name="genres">
+						<span class="checkmark"></span>Cards
+					</label>
+					<label for="casual">
+						<input id="casual" value="casual" type="checkbox" name="genres">
+						<span class="checkmark"></span>Casual
+					</label>
+					<label for="fighting">
+						<input id="fighting" value="fighting" type="checkbox" name="genres">
+						<span class="checkmark"></span>Fighting
+					</label>
+					<label for="gacha">
+						<input id="gacha" value="gacha" type="checkbox" name="genres">
+						<span class="checkmark"></span>Gacha
+					</label>
+					<label for="horror">
+						<input id="horror" value="horror" type="checkbox" name="genres">
+						<span class="checkmark"></span>Horror
+					</label>
+					<label for="mobile">
+						<input id="mobile" value="mobile" type="checkbox" name="genres">
+						<span class="checkmark"></span>iOS/Android
+					</label>
+					<label for="mmo">
+						<input id="mmo" value="mmo" type="checkbox" name="genres">
+						<span class="checkmark"></span>MMO
+					</label>
+					<label for="party">
+						<input id="party" value="party" type="checkbox" name="genres">
+						<span class="checkmark"></span>Multiplayer
+					</label>
+					<label for="platform">
+						<input id="platform" value="platform" type="checkbox" name="genres">
+						<span class="checkmark"></span>Platform
+					</label>
+					<label for="rhythm">
+						<input id="rhythm" value="rythm" type="checkbox" name="genres">
+						<span class="checkmark"></span>Rhythm
+					</label>
+					<label for="rpg">
+						<input id="rpg" value="rpg" type="checkbox" name="genres">
+						<span class="checkmark"></span>Role-playing
+					</label>
+					<label for="sandbox">
+						<input id="sandbox" value="sandbox" type="checkbox" name="genres">
+						<span class="checkmark"></span>Sandbox
+					</label>
+					<label for="shooter">
+						<input id="shooter" value="shooter" type="checkbox" name="genres">
+						<span class="checkmark"></span>Shooter
+					</label>
+					<label for="simulation">
+						<input id="simulation" value="simulation" type="checkbox" name="genres">
+						<span class="checkmark"></span>Simulation
+					</label>
+					<label for="sports">
+						<input id="sports" value="sports" type="checkbox" name="genres">
+						<span class="checkmark"></span>Sports
+					</label>	
+					<label for="stealth">
+						<input id="stealth" value="stealth" type="checkbox" name="genres">
+						<span class="checkmark"></span>Stealth
+					</label>
+					<label for="survival">
+						<input id="survival" value="survival" type="checkbox" name="genres">
+						<span class="checkmark"></span>Survival
+					</label>
+					<label for="vn">
+						<input id="vn" value="vnovels" type="checkbox" name="genres">
+						<span class="checkmark"></span>Visual novels
+					</label>											
+				</div>
+				<br>
+				<p>Which platforms do you usually play on? (you can choose more than one option):</p>
+				<div class="columns">
+					<label for="pc">
+						<input id="pc" value="pc" type="checkbox" name="platform">
+						<span class="checkmark"></span>PC
+					</label>
+					<label for="vr">
+						<input id="vr" value="vr" type="checkbox" name="platform">
+						<span class="checkmark"></span>VR
+					</label>
+					<label for="console">
+						<input id="console" value="console" type="checkbox" name="platform">
+						<span class="checkmark"></span>Console
+					</label>
+					<label for="portable">
+						<input id="portable" value="portable" type="checkbox" name="platform">
+						<span class="checkmark"></span>Mobile
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="form-field">
+				<legend>Contact details:</legend>
+				<label id="name-label" for="name">Name:    
+					<input id="name" type="text" placeholder="John Doe" required>
 				</label>
+				<label id="email-label" for="email">E-mail:
+					<input id="email" type="email" placeholder="john@doe.com" required>
+				</label>
+			</fieldset>
+
+			<div class="form-field">Additional comments (tell us which games would you like to see featured in our future posts):  	
+				<textarea placeholder="Your comments..."></textarea>
 			</div>
-			<br>
-			<label for="dropdown">Age range:
-				<select id="dropdown" name="age-group">
-					<option value="0-12">Less than 13 years</option>
-					<option value="13-19">13-19 years</option>
-					<option value="20-26">20-26 years</option>
-					<option value="26-30">26-30 years</option>
-					<option value="31-40">31-40 years</option>
-					<option value="41-50">41-50 years</option>
-					<option value="50-60">50-60 years</option>
-					<option value="60+">More than 60 years</option>
-				</select>
-			</label>
-		</fieldset>
 
-		<fieldset class="form-field">
-			<legend>Questions:</legend>
-			<label id="number-label" for="number">How many hours do you usually play in a week?:<br>
-				<input id="number" type="number" name="hours-played" min="0" max="168" step="0.5" placeholder="0"> 
-			</label>
-			<label for="expenses">Approximately, how much money (in USD) do you spend in videogames in a year?:<br>
-				<input id="expenses" type="number" name="expenses" min="0" max="100000" placeholder="0">
-			</label>
-			<p>Which genres do you like the most? (you can choose more than one option):</p>
-			<div class="columns-2">
-				<label for="action">						
-					<input id="action" value="action" type="checkbox" name="genres">
-					<span class="checkmark"></span>Action
-				</label>
-				<label for="adventure">
-					<input id="adventure" value="adventure" type="checkbox" name="genres">
-					<span class="checkmark"></span>Adventure
-				</label>
-				<label for="battleroyale">
-					<input id="battleroyale" value="battleroyale" type="checkbox" name="genres">
-					<span class="checkmark"></span>Battle Royale
-				</label>
-				<label for="cards">
-					<input id="cards" value="cards" type="checkbox" name="genres">
-					<span class="checkmark"></span>Cards
-				</label>
-				<label for="casual">
-					<input id="casual" value="casual" type="checkbox" name="genres">
-					<span class="checkmark"></span>Casual
-				</label>
-				<label for="fighting">
-					<input id="fighting" value="fighting" type="checkbox" name="genres">
-					<span class="checkmark"></span>Fighting
-				</label>
-				<label for="gacha">
-					<input id="gacha" value="gacha" type="checkbox" name="genres">
-					<span class="checkmark"></span>Gacha
-				</label>
-				<label for="horror">
-					<input id="horror" value="horror" type="checkbox" name="genres">
-					<span class="checkmark"></span>Horror
-				</label>
-				<label for="mobile">
-					<input id="mobile" value="mobile" type="checkbox" name="genres">
-					<span class="checkmark"></span>iOS/Android
-				</label>
-				<label for="mmo">
-					<input id="mmo" value="mmo" type="checkbox" name="genres">
-					<span class="checkmark"></span>MMO
-				</label>
-				<label for="party">
-					<input id="party" value="party" type="checkbox" name="genres">
-					<span class="checkmark"></span>Multiplayer
-				</label>
-				<label for="platform">
-					<input id="platform" value="platform" type="checkbox" name="genres">
-					<span class="checkmark"></span>Platform
-				</label>
-				<label for="rhythm">
-					<input id="rhythm" value="rythm" type="checkbox" name="genres">
-					<span class="checkmark"></span>Rhythm
-				</label>
-				<label for="rpg">
-					<input id="rpg" value="rpg" type="checkbox" name="genres">
-					<span class="checkmark"></span>Role-playing
-				</label>
-				<label for="sandbox">
-					<input id="sandbox" value="sandbox" type="checkbox" name="genres">
-					<span class="checkmark"></span>Sandbox
-				</label>
-				<label for="shooter">
-					<input id="shooter" value="shooter" type="checkbox" name="genres">
-					<span class="checkmark"></span>Shooter
-				</label>
-				<label for="simulation">
-					<input id="simulation" value="simulation" type="checkbox" name="genres">
-					<span class="checkmark"></span>Simulation
-				</label>
-				<label for="sports">
-					<input id="sports" value="sports" type="checkbox" name="genres">
-					<span class="checkmark"></span>Sports
-				</label>	
-				<label for="stealth">
-					<input id="stealth" value="stealth" type="checkbox" name="genres">
-					<span class="checkmark"></span>Stealth
-				</label>
-				<label for="survival">
-					<input id="survival" value="survival" type="checkbox" name="genres">
-					<span class="checkmark"></span>Survival
-				</label>
-				<label for="vn">
-					<input id="vn" value="vnovels" type="checkbox" name="genres">
-					<span class="checkmark"></span>Visual novels
-				</label>											
+			<div class="submit">
+				<button id="submit" type="submit">Submit Survey</button>
 			</div>
-			<br>
-			<p>Which platforms do you usually play on? (you can choose more than one option):</p>
-			<div class="columns">
-				<label for="pc">
-					<input id="pc" value="pc" type="checkbox" name="platform">
-					<span class="checkmark"></span>PC
-				</label>
-				<label for="vr">
-					<input id="vr" value="vr" type="checkbox" name="platform">
-					<span class="checkmark"></span>VR
-				</label>
-				<label for="console">
-					<input id="console" value="console" type="checkbox" name="platform">
-					<span class="checkmark"></span>Console
-				</label>
-				<label for="portable">
-					<input id="portable" value="portable" type="checkbox" name="platform">
-					<span class="checkmark"></span>Mobile
-				</label>
-			</div>
-		</fieldset>
-
-		<fieldset class="form-field">
-			<legend>Contact details:</legend>
-			<label id="name-label" for="name">Name:    
-				<input id="name" type="text" placeholder="John Doe" required>
-			</label>
-			<label id="email-label" for="email">E-mail:
-				<input id="email" type="email" placeholder="john@doe.com" required>
-			</label>
-		</fieldset>
-
-		<div class="form-field">Additional comments (tell us which games would you like to see featured in our future posts):  	
-			<textarea placeholder="Your comments..."></textarea>
-		</div>
-
-		<div class="submit">
-			<button id="submit" type="submit">Submit Survey</button>
-		</div>
-	</form>
-	<footer>
-		<div class="copyright">© 2021 by M.R.P.A. - Project for freeCodeCamp.org<div>
-	</footer>
-</body>
+		</form>
+		<footer>
+			<div class="copyright">© 2021 by M.R.P.A. - Project for freeCodeCamp.org</div>
+		</footer>
+	</body>
 </html>
