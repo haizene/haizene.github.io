@@ -1,0 +1,209 @@
+html {
+    font-size: 100%;
+}
+
+#main {
+	text-align: center;
+}
+
+body {
+  	background: #C8E9F4; /* Old browsers */
+	background: -moz-linear-gradient(top, hsl(195,67%,87%) 0%, hsl(194,71%,63%) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, hsl(195,67%,87%) 0%,hsl(194,71%,63%) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, hsl(195,67%,87%) 0%,hsl(194,71%,63%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C8E9F4', endColorstr='#5eC5E4',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+	font-size: calc(2em + 2vw);
+	line-height: 1em;
+	color: #F8300E;
+}
+
+.sub-title {
+	text-align: center;
+	padding-bottom: 20px;
+	text-indent: 0px;
+	margin: 0 1em 0 1em;
+}
+
+h2 {
+	display: inline-block;
+	font-family: 'Permanent Marker', monospace;
+	font-weight: 300;
+	color: #FF5E1C;
+	font-size: calc(1.5em + 1.5vw);
+    border: 15px #55677596;;
+    border-style: none none double none;
+}
+
+#img-div {
+	margin: auto;
+	padding-top: 1em;
+	align-items: center;
+}
+
+#image {
+	max-width: 40%;
+	height: auto;
+	border-radius: 10%;
+	display: block;
+	margin: 0 auto;
+}
+
+#img-caption {
+	text-align: center;
+	font-size: small;
+	font-family: 'Special Elite', monospace;
+	color: #2D1E2F;
+	padding-top: 1em;
+	padding-bottom: 3em;
+}
+
+.frame {
+	border: 25px solid transparent;
+	border-image: url(images/border.png) 40% stretch;
+}
+
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	margin: 4em;
+	padding-top: 2em;
+}
+
+a:link {
+	color: #71492E;
+	text-decoration: none;
+	text-shadow: 1px 1px #2D1E2F;
+}
+
+a:visited {
+	color: #ff4700;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F7B32B;
+}
+
+a:active {
+	color: gray;
+	text-decoration: none;
+}
+
+#title {
+	font-family: 'Permanent Marker', monospace;
+	font-weight: 400;
+	padding: .3em;
+    display: inline-block;
+    border: 15px #55677596;
+    border-style: none none double none;
+}
+
+li, p {
+	text-align: justify;
+	font-family: 'Special Elite', monospace;
+	color: #2D1E2F;
+	font-size: calc(.7em + .4vw);
+	justify-content: center;
+	line-height: 20px;
+	text-shadow: 2px 2px 4px gray;
+}
+
+p {
+	text-indent: 5%;
+	padding-bottom: 1em;
+}
+
+.list-icon {
+	list-style: none;
+}
+
+.list-icon li::before {
+	content: "";
+	width: 3em;
+	height: 3em;
+	display: inline-block;
+	background-image: url("images/icon-mantis.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-origin: content-box;
+	background-size: 100%;
+	position: relative;
+	top: 1rem;
+	bottom: 1rem;
+	vertical-align: text-bottom;
+}
+
+.box, ul {
+	background: #dbebf1; /* Old browsers */
+	background: -moz-linear-gradient(bottom, hsl(196,44%,80%) 0%, hsl(194,46%,63%) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(bottom, hsl(196,44%,80%) 0%,hsl(194,46%,63%) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to top, hsl(196,44%,80%) 0%,hsl(194,46%,63%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99cad9', endColorstr='#dbebf1',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-left: 7em;
+    margin-right: 7em;
+    text-align: justify;
+}
+
+ul {
+	padding-bottom: 3.5em;
+}
+
+@media screen and (max-width: 600px){
+	.list-icon li::before {
+ 		 content: "";
+ 		 width: 3em;
+ 		 height: 3em;
+ 		 display: inline-block;
+		 background-image: url("images/icon-mantis.png");
+		 background-repeat: no-repeat;
+		 background-position: left center;
+ 		 background-origin: content-box;
+ 		 background-size: 100%;
+ 		 position: relative;
+ 		 top: 1rem;
+ 		 bottom: 1rem;
+ 		 vertical-align: text-bottom;
+	}
+	ul, .box {
+	    padding: 2em;
+	    padding-left: 1em;
+	    padding-right: 1em;
+	    margin-left: 1em;
+	    margin-right: 1em;
+	}
+	#image {
+		max-width: 15em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.frame {
+    	max-width: 13em;
+  	}
+  	#image {
+    max-width: 12em;
+	}
+}
+
+footer {
+	padding: 2em;
+	color: rgb(228,245,252);
+	text-align: center;
+	background-color: #2D1E1F;
+	font-family: 'Special Elite', monospace;
+	font-weight: bold;
+}
+
+.copyright {
+	padding-top: 0.6em;
+}
