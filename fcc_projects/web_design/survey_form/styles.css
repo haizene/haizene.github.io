@@ -32,10 +32,10 @@ p {
 }
 
 fieldset {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
   border: 2px solid #757575;
   -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;  
+  -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
@@ -118,17 +118,17 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .checkmark, .radio {
-   display: inline-block;
-   cursor: pointer;
-   position: relative;
-   background-color: #fff;
-   width: 20px;
-   height: 20px;
-   vertical-align: -4px;
-   border-radius: 40%;
-   transform: rotate(45deg);
-   margin-right: 0.5em;
-   margin-bottom: 0.3em;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  vertical-align: -4px;
+  border-radius: 40%;
+  transform: rotate(45deg);
+  margin-right: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .radio {
